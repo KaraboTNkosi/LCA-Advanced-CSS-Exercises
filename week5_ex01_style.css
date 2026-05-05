@@ -1,0 +1,60 @@
+/*Global Variables*/
+
+body {
+  font-family: Georgia, 'Times New Roman', Times;
+  background-color: #fdfce8;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px; 
+}
+
+/* Grid Layout */
+
+.product-grid {
+  display: grid;
+  gap: 20px; /*Creating space between the product cards so they aren't cramped together*/ 
+  justify-content: center; /*Product Cards will begin in alignment with the header which looks better*/
+  grid-template-columns: repeat(3, 300px); /*3 cards of 300px per row on Desktop*/
+}
+
+/* Card Styling */
+
+.product-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+
+.addtocart {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border-color: #4caf50;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.addtocart:hover {
+  background-color: green;
+  border-color: green;
+}
+
+/* Layouts for Mobile and Tablet */
+
+/* Tablet: 2 cards per row max-width: 768px*/
+
+@media (max-width: 768px) {
+  .product-grid{grid-template-columns: repeat(2, 300px);
+  }
+}
+
+/*Mobile: 1 Card per row max-width: 480px*/
+ @media (max-width: 480px){
+ .product-grid {grid-template-columns: 300px;
+ }
+}
