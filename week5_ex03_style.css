@@ -1,0 +1,213 @@
+/* Colour Presets + Page Reset */
+:root {
+  --pastelpink: #ffd1dc;
+  --pinkhue: #f8e1ee;
+  --purplepink: #b388eb;
+  --hotpink: #ff69b4;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Verdana, sans-serif;
+  background-color: var(--pinkhue);
+  overflow-x: hidden; /* Prevents Scrollbars during animations */ 
+}
+
+/* Loading Animation */
+.loader {
+  position: fixed;
+  background: var(--pinkhue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeOut 1s forwards 2s; /* Opacity Transition */
+}
+
+.spinner {
+  width: 50px;
+  height: 50px; /* height = width because perfect circle */ 
+  border: 7px solid white;
+  border-top: 7px solid var(--hotpink);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin{
+  to {transform: rotate(360deg);}
+}
+@keyframes fadeOut {
+  to{opacity: 0; visibility: hidden;}
+}
+
+/*Animated Navigation bar*/
+.nav-main {
+  background-color: var(--pinkhue);
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.nav-main a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background-color: black;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-main a:hover {
+  background-color: var(--pinkhue);
+  color: black;
+}
+
+/* Hero Styling and Animating */
+.hero {
+  height: 80vh;
+  background: radial-gradient(circle, white, var(--pinkhue), var(--pastelpink), var(--hotpink));
+  background-size: 400% 400%;
+  animation: gradientMove 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+.hero-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Title and Image Animation */
+.bouncetitle {
+  font-size: 68px;
+  font-family: "Rubik Beastly", system-ui;
+  font-weight: 100;
+  color: var(--hotpink);
+  text-shadow: 3px 3px black;
+  z-index: 10; /* keeps the title in front of the images */
+  position: relative;
+  animation: pulse 1s infinite; 
+}
+
+@keyframes pulse {
+  from {transform: scale(1);}
+  to {transform: scale(1.5);}
+}
+
+.description {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman';
+  font-style: italic;
+  font-weight: bold;
+  margin-top: -50px;
+}
+[class^="sparkle"] {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  transform-origin: center;
+  animation: burstOut 5s ease-in infinite;
+}
+
+[class^="sparkle"] img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+@keyframes burstOut {
+  0% {transform: translate(-50%, -50%) scale(0.5) skewX(-2deg); opacity: 0.5;} 
+  20% {opacity: 2;}
+  50% {opacity: 1;}
+  100% {transform: var(--travel) rotate(360deg) scale(1.5) skewX(2deg); opacity: 0.5;}
+}
+
+/* Unique directions for each character */
+.sparkle1 {--travel: translate(-300px, -200px);}
+.sparkle2 {--travel: translate(300px, -200px);}
+.sparkle3 {--travel: translate(-300px, 200px);}
+.sparkle4 {--travel: translate(300px, 200px);}
+
+/* Section Title */
+.sect-title {
+  font-family: "Rubik Beastly", system-ui;
+  font-weight: 100;
+  font-size: 48px;
+  color: var(--hotpink);
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+/* Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 300px);
+  gap: 20px;
+  padding: 50px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  background: var(--pastelpink);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  opacity: 0;
+  animation: slideIn 0.8s ease forwards;
+  animation-delay: calc(var(--delay)); /*Shift on screen in a sequence */
+}
+
+@keyframes slideIn {
+  from { transform: translateY(50px); opacity: 0;}
+  to {transform: translateY(0px); opacity: 1;}
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  transition: all 0.4s ease; /*Size transition*/
+  box-shadow: 0 10px 20px var(--hotpink);
+}
+
+.card_img img {
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+
+/* Pulse Buttons */
+.card-btn {
+  background-color: var(--hotpink);
+  color: black;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 25px;
+  margin-top: 15px;
+  animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); box-shadow: 0 0 15px var(--pastelpink); }
+  100% { transform: scale(1); }
+}
