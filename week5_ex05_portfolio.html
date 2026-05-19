@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karabo's Tech Corner | Tech Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="week5_ex05_style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+  <nav class="nav-bar">
+    <div class="nav-logo">KARABO'S TECH CORNER</div>
+    <div class="nav-links">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#contact">contact</a>
+    </div>
+  </nav>
+
+<!-- Hero Section/Home -->
+  <header class="hero" id="home">
+    <h2 class="hero-title">HELLO WORLD!</h2>
+
+    
+    <input type="checkbox" id="trigger" class="hidden-trigger">
+
+    <!-- Hero Terminal -->
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+      <p>Are You Ready?</p>
+      <div class="terminal-buttons">
+        <label for="trigger" class="yes-btn">yes</label>
+        <label for="trigger" class="no-btn">no</label>
+      </div>
+    </div>
+
+    
+    <div class="float-container">
+      <p class="floating-info name">Tseleng Karabo Nkosi</p>
+      <p class="floating-info tagline">Creative Thinking. Tech Building. Problem Solving.</p>
+      <button class="floating-info cta-btn">Connect!</button>
+    </div>
+
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2 class="pixel-text">Getting to know the Developer</h2>
+    <div class="about-content">
+      <img src="https://placehold.net/400x400.png" alt="Karabo" class="about-img">
+      <div class="pink-terminal about-bio">
+        <div class="terminal-bar"><div class="dots"></div></div>
+        <p class="bio">An aspiring developer with a strong passion for building functional, intuitive, and aesthetic tech solutions. My passion for tech is fueled by my love for continuous learning and building impactful digital spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container">
+    <h2 class="pixel-text">Skills</h2>
+    <div class="pyramid-container">
+      <div class="skill-card top">
+        <h3>Technical Skills</h3>
+        <ul>
+          <li>Python</li>
+          <li>HTML</li>
+          <li>Git</li>
+          <li>Advanced CSS</li>
+          <li>RStudio</li>
+        </ul>
+      </div>
+      <div class="bottom-row">
+        <div class="skill-card">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Critical Thinking</li>
+            <li>Problem-solving</li>
+            <li>Communication</li>
+            <li>Collaboration</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Certifications</h3>
+          <ul>
+            <li>Google Foundations of Data Science</li>
+            <li>Google Foundations of Cybersecurity</li>
+            <li>IBM Introduction to Cloud Computing</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <section class="container" id="projects">
+    <h2 class="pixel-text">Projects</h2>
+    <div class="projects-grid">
+      <div class="projects-card">
+        <h3 class="pixel-text">Chess Game</h3>
+        <p>A game application using JavaScript</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="projects-card">
+        <h3 class="pixel-text">E-Commerce Site</h3>
+        <p>An interactive clothing store using JavaScript, HTML, and CSS.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="projects-card">
+        <h3 class="pixel-text">Pinterest Finds</h3>
+        <p>An application that makes use of APIs, JavaScript, and databases to find clothing items from Pinterest board saves.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+      <div class="projects-card">
+        <h3 class="pixel-text">Money Matters</h3>
+        <p>A project that showcases data processing and visualisation by taking financial statements and breaking down the spending habits of the individual based on the statement.</p>
+        <a href="#" target="_blank">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container">
+    <h2 class="pixel-text">Let's Chat</h2>
+    <form class="contact-form">
+      <label class="form-label">Name:</label>
+      <input type="text" required>
+      <label class="form-label">Email:</label>
+      <input type="email" required>
+      <label class="form-label">Message:</label>
+      <textarea rows="5"></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Tseleng Karabo Nkosi &copy; 2026</p>
+  </footer>
+
+</body>
+</html>
